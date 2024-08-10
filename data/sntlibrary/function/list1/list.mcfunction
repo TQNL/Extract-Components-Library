@@ -6,8 +6,9 @@ data modify storage get_components:extract handling.concat set string storage ge
 data modify storage get_components:extract lists.list_component_keys_stripped append value {key:''}
 function sntlibrary:list1/concat with storage get_components:extract handling
 
+data modify storage get_components:extract handling.concat set string storage get_components:extract handling.concat 10
 function sntlibrary:list1/other_concat with storage get_components:extract handling
-data modify storage get_components:extract lists.list_component_keys_stripped[-1].key set string storage get_components:extract handling.concat 10
+data modify storage get_components:extract lists.list_component_keys_stripped[-1].key set from storage get_components:extract handling.concat
 
 # make list of accompanying nbt data
 function sntlibrary:list2/list_iteration

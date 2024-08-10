@@ -17,8 +17,6 @@ scoreboard players set #snt_lib_iteration_plus get_components_library 1
 function sntlibrary:list1/iterate {iteration:0,iteration_plus:1}
 
 # instruction: clean other data
-scoreboard players reset * get_components_library
-data remove storage get_components:extract handling
 clone -14 -64 18 -14 -64 18 -14 -64 19
 forceload remove -14 19
 
@@ -27,4 +25,7 @@ forceload remove -14 19
 data modify storage get_components:extract lists_backup set from storage get_components:extract lists
 function sntlibrary:assemble/1
 function sntlibrary:assemble/4
-data remove storage get_components:extract combining
+#function sntlibrary:assemble/6
+scoreboard players reset * get_components_library
+data remove storage get_components:extract handling
+#data remove storage get_components:extract combining
