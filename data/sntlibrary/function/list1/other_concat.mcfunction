@@ -1,1 +1,1 @@
-$data modify storage get_components:extract handling.concat set value "$(concat)="
+$data modify storage get_components:extract handling.concat set value ",$(concat)="
