@@ -1,4 +1,10 @@
+# make component lists
 scoreboard players reset #snt_lib_dq_count get_components_library
-$data modify storage get_components:extract lists.list_component_keys append string storage get_components:extract handling.string $(pos1) $(pos2)
-data modify storage get_components:extract lists.list_component_keys[-1] set string storage get_components:extract lists.list_component_keys[-1] 0 -2
-data modify storage get_components:extract lists.list_component_keys[-1] set string storage get_components:extract lists.list_component_keys[-1] 1
+$data modify storage get_components:extract handling.concat set string storage get_components:extract handling.string $(pos1) $(pos2)
+data modify storage get_components:extract handling.concat set string storage get_components:extract handling.concat 0 -2
+data modify storage get_components:extract handling.concat set string storage get_components:extract handling.concat 1
+data modify storage get_components:extract lists.list_component_keys_stripped append value {key:''}
+data modify storage get_components:extract lists.list_component_keys_stripped[-1].key set string storage get_components:extract handling.concat 10
+function sntlibrary:list1/concat with storage get_components:extract handling
+
+# make list of accompanying nbt data
