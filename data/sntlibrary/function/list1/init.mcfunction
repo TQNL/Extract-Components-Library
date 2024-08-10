@@ -2,7 +2,9 @@
 
 forceload add -14 19
 
-# instruction: make source configurable
+data remove storage get_components:extract lists
+
+# instruction: make  config tutorial
 # intruction: make the situation of no components directly return `[]`
 # if those coords arent bedrock, pick somewhere else
 
