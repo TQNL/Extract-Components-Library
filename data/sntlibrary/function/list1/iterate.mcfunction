@@ -13,7 +13,6 @@ execute if data storage get_components:extract {handling:{check:'}'}} run functi
 
 
 # terminate
-execute store result score #snt_lib_string_length get_components_library run data get storage get_components:extract handling.string
 execute if score #snt_lib_iteration get_components_library > #snt_lib_string_length get_components_library run return 0
 
 
