@@ -23,9 +23,6 @@ forceload remove -14 19
 
 # assemble whole components-based command structure
 data modify storage get_components:extract lists_backup set from storage get_components:extract lists
-function sntlibrary:assemble/1
-function sntlibrary:assemble/4
-#function sntlibrary:assemble/6
+function sntlibrary:assemble/init
 scoreboard players reset * get_components_library
 data remove storage get_components:extract handling
-#data remove storage get_components:extract combining
