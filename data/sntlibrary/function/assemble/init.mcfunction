@@ -7,4 +7,5 @@ execute if data storage get_components:extract combining.list[1].comp run functi
 
 data modify storage get_components:extract components_command set from storage get_components:extract combining.list[0].comp
 data modify storage get_components:extract components_command set string storage get_components:extract components_command 1
-#data remove storage get_components:extract combining
+data remove storage get_components:extract combining
+data remove storage get_components:extract lists
