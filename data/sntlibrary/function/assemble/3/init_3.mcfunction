@@ -1,1 +1,1 @@
-return run function sntlibrary:assemble/3 with storage get_components:extract combining
+return run function sntlibrary:assemble/3/3 with storage get_components:extract combining
