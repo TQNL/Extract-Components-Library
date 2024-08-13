@@ -23,6 +23,7 @@ function sntlibrary:list1/iterate {iteration:0,iteration_plus:1}
 data modify storage get_components:extract lists_backup set from storage get_components:extract lists
 function sntlibrary:assemble/init
 scoreboard players reset * get_components_library
+scoreboard players set #two get_components_library 2
 data remove storage get_components:extract handling
 
 

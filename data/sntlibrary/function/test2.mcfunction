@@ -1,0 +1,1 @@
+$give @p command_block[$(components_command)]

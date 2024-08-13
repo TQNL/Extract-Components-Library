@@ -1,1 +1,2 @@
-give @p command_block[block_entity_data={Command:'/tellraw @p {"entity":"@p","color":"yellow","nbt":"SelectedItem.components"}',LastExecution:8717969L,SuccessCount:1,TrackOutput:1b,UpdateLastExecution:1b,auto:0b,conditionMet:1b,id:"minecraft:command_block",powered:0b},custom_name='"test block"']
+function sntlibrary:start
+function sntlibrary:test2 with storage get_components:extract
