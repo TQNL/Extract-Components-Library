@@ -16,8 +16,6 @@ data remove storage get_components:extract components_command
 
 forceload add -14 19
 
-# instruction: make config tutorial
-
 $data merge storage get_components:extract {handling:{get:{source:"$(source)",target:"$(target)",path:"$(path)"}}}
 data modify storage get_components:extract source set from storage get_components:extract handling.get.source
 data modify storage get_components:extract target set from storage get_components:extract handling.get.target
