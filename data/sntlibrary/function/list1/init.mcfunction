@@ -4,6 +4,9 @@ data remove storage get_components:extract item_id
 $data modify storage get_components:extract item_id set from $(source) $(target) $(path).id
 data remove storage get_components:extract item_count
 $data modify storage get_components:extract item_count set from $(source) $(target) $(path).count
+data remove storage get_components:extract source
+data remove storage get_components:extract target
+data remove storage get_components:extract path
 
 $execute unless data $(source) $(target) $(path).components run return run data modify storage get_components:extract components_command set value ''
 
@@ -16,6 +19,9 @@ forceload add -14 19
 # instruction: make config tutorial
 
 $data merge storage get_components:extract {handling:{get:{source:"$(source)",target:"$(target)",path:"$(path)"}}}
+data modify storage get_components:extract source set from storage get_components:extract handling.get.source
+data modify storage get_components:extract target set from storage get_components:extract handling.get.target
+data modify storage get_components:extract path set from storage get_components:extract handling.get.path
 $setblock -14 -64 19 oak_sign{front_text:{messages:['{"nbt":"$(path).components","$(source)":"$(target)"}','{"text":""}','{"text":""}','{"text":""}']}} replace
 data modify storage get_components:extract handling.string set string block -14 -64 19 front_text.messages[0] 3 -1
 scoreboard players set #snt_lib_iteration get_components_library 0
