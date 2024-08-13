@@ -1,2 +1,9 @@
+# following function
+$give @p $(item_id)[$(components_command)]
+
+# other uses:
+$item replace block ~ ~ ~ container.0 with $(item_id)[$(components_command)] $(item_count)
+
+## test:
 $execute if items $(source) $(target) hotbar.0 $(item_id)[$(components_command)] run return run tellraw @p {"color":"green","text":"this is the original item"}
 tellraw @p {"color":"red","text":"this is NOT the original item"}
