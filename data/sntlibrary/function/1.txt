@@ -1,4 +1,0 @@
-##this data pack library
-function sntlibrary:list1/init {source:"entity",target:"@p",path:"SelectedItem"}
-function sntlibrary:do_smth with storage get_components:extract
-

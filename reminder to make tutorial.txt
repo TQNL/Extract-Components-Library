@@ -1,1 +1,0 @@
-initialise library with the command function sntlibrary:list1/init {source:"<source>",target:"<target>/name",path:"<path excluding components field>"}
