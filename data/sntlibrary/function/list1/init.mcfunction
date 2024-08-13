@@ -1,4 +1,4 @@
-# assuming the player called this function, at their location:
+## probably works in other dimensions
 
 data remove storage get_components:extract item_id
 $data modify storage get_components:extract item_id set from $(source) $(target) $(path).id
