@@ -4,6 +4,6 @@
 # save the lists, because it gets reset
 # assumes there always is a path
 # explain all variables
-# storage get_components:extract lists_backup
+# storage get_components:extract lists_backup - retired
 # assuming ' corralates with text fields, check if all senarios are applicable
 function sntlibrary:list1/init {source:"entity",target:"@p",path:"SelectedItem"}
