@@ -3,8 +3,8 @@ The "Extract Components Library" is a Minecraft Java data pack library designed 
 
 ### Context and Changes in Minecraft 1.20.5
 
-- **Macro Functions**: Introduced in 1.20.2, these functions allow the insertion of variables, enabling dynamic item manipulation.
-- **Item Components**: In 1.20.5, the NBT tags for items were replaced with a component-based system, altering how item counts and other attributes are stored and referenced.
+- Macro Functions: Introduced in 1.20.2, these functions allow the insertion of variables, enabling dynamic item manipulation.
+- Item Components: In 1.20.5, the NBT tags for items were replaced with a component-based system, altering how item counts and other attributes are stored and referenced.
 
 ### Problem with New System
 
@@ -12,8 +12,8 @@ The transition to item components posed a challenge: commands fail if an item la
 
 ### Extract Components Library Functionality
 
-- **Data Extraction**: The library efficiently extracts and saves item data, including the ID, count, and components. It converts the components into a string format for easier command integration.
-- **Handling Missing Components**: Before data extraction, the library checks for a components field. If absent, it stops the extraction process and leaves an empty field to prevent function failures.
+- Data Extraction: The library efficiently extracts and saves item data, including the ID, count, and components. It converts the components into a string format for easier command integration.
+- Handling Missing Components: Before data extraction, the library checks for a components field. If absent, it stops the extraction process and leaves an empty field to prevent function failures.
 
 ### Usage of the Library
 
