@@ -7,7 +7,7 @@ $data modify storage get_components:extract item_count set from $(source) $(targ
 
 $execute unless data $(source) $(target) $(path).components run return run data modify storage get_components:extract components_command set value ''
 
-data remove storage get_components:extract lists_backup
+##data remove storage get_components:extract lists_backup
 data remove storage get_components:extract combining
 data remove storage get_components:extract components_command
 
@@ -25,7 +25,7 @@ function sntlibrary:list1/iterate {iteration:0,iteration_plus:1}
 
 
 # assemble whole components-based command structure
-data modify storage get_components:extract lists_backup set from storage get_components:extract lists
+##data modify storage get_components:extract lists_backup set from storage get_components:extract lists
 function sntlibrary:assemble/init
 scoreboard players reset * get_components_library
 scoreboard players set #two get_components_library 2
