@@ -1,5 +1,10 @@
 # assuming the player called this function, at their location:
 
+data remove storage get_components:extract item_id
+$data modify storage get_components:extract item_id set from $(source) $(target) $(path).id
+data remove storage get_components:extract item_count
+$data modify storage get_components:extract item_count set from $(source) $(target) $(path).count
+
 $execute unless data $(source) $(target) $(path).components run return run data modify storage get_components:extract components_command set value ''
 
 data remove storage get_components:extract lists_backup
