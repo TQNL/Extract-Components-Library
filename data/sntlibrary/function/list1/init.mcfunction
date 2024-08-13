@@ -16,11 +16,13 @@ data remove storage get_components:extract components_command
 
 forceload add -14 19
 
-$data merge storage get_components:extract {handling:{get:{source:"$(source)",target:"$(target)",path:"$(path)"}}}
+$data merge storage get_components:extract {handling:{get:{source:'$(source)',target:'$(target)',path:'$(path)'}}}
 data modify storage get_components:extract source set from storage get_components:extract handling.get.source
 data modify storage get_components:extract target set from storage get_components:extract handling.get.target
 data modify storage get_components:extract path set from storage get_components:extract handling.get.path
-$setblock -14 -64 19 oak_sign{front_text:{messages:['{"nbt":"$(path).components","$(source)":"$(target)"}','{"text":""}','{"text":""}','{"text":""}']}} replace
+
+$data modify storage get_components:extract handling.store_data set from $(source) $(target) $(path).components
+setblock -14 -64 19 oak_sign{front_text:{messages:['{"nbt":"handling.store_data","storage":"get_components:extract"}','{"text":""}','{"text":""}','{"text":""}']}} replace
 data modify storage get_components:extract handling.string set string block -14 -64 19 front_text.messages[0] 3 -1
 scoreboard players set #snt_lib_iteration get_components_library 0
 scoreboard players set #snt_lib_iteration_plus get_components_library 1
