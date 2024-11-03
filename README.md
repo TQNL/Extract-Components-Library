@@ -8,7 +8,7 @@ The "Extract Components Library" is a Minecraft Java data pack library designed 
 
 ### Problem with New System
 
-The transition to item components posed a challenge: commands fail if an item lacks a "components" field. To avoid command failures, the data pack offers a solution to streamline macro functions, reducing redundancy and inefficiency.
+The transition to item components posed a challenge: commands **in macro functions** fail if an item lacks a "components" field. To avoid command failures, the data pack offers a solution to streamline macro functions, reducing redundancy and inefficiency.
 
 ### Extract Components Library Functionality
 
