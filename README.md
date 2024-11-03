@@ -20,9 +20,22 @@ The transition to item components posed a challenge: commands **in macro functio
 ### syntax
 before running your macro function with the command for your item, you run a command with the following syntax: `function sntlibrary:list1/init {source:'<source>',target:'<target>',path:'<path>'}`. The variables here that I put in the angle brackets are the same used in the `/data get` command: `/data get (block <targetPos>|entity <target>|storage <target>) ...`. If you dont need a path, because the item data is surface level for some reason, put `path:''`
 
-Your macro function comes after this command, and since all the data of your item that this library extracted is stored in its storage, you run your function like so: `function your:function with storage get_components:extract`.
+Your macro function comes after this command, and since all the data of your item that this library extracted is stored in its storage, you run your function like so: `function your:function with storage get_components:extract`. It also extracts the id and count of the item, apart from the components.
 
 The library integrates with commands like /give, /item, and /execute if|unless items, allowing users to reference extracted item data seamlessly in these commands, allowing for things like item replacements from the library's storage, or matching items in queries, expanding the library's utility.
+
+### example:
+see full wiki for examples for the method used without this library. basically, you need 2 macro functions, 1 with `$(id)` and one without `$(id)`
+```
+// initial function: executed on a container, as a marker entity:
+function sntlibrary:list1/init {source:'block',target:'^ ^ ^1',path:'Items[0]'} // get components and item data of 
+data modify entity @s data.item set from storage get_components:extract
+```
+
+```
+// macro function: check if the item in the first slot is the same as the stored item in the marker:
+$execute positioned ^ ^ ^1 unless items block ~ ~ ~ container.0 $(item_id)[$(components_command)] run item replace block ~ ~ ~ container.0 with air
+```
 
 ### Installation
 
