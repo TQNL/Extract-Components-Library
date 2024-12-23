@@ -1,6 +1,6 @@
 {
     "pack":{
         "pack_format": 48,
-        "description": "By ThijquintNL."
+        "description": "The Extract Components Library is a data pack that enables dynamic referencing and manipulation of item data using variables in commands. It efficiently extracts and converts item components, for seamless integration in the 1.20.5 item command structure, and preventing command failures. By ThijquintNL."
     }
 }
