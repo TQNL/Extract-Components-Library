@@ -1,0 +1,2 @@
+use new block coords to put the sign on, outside the world border:
+https://bookshelf.docs.gunivers.net/en/latest/contribute/shared-data.html#shared-blocks
